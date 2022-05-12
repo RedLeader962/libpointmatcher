@@ -290,7 +290,7 @@ TEST(Transformation, ComputeRigidTransformDataPoints3D)
     }
     // Translation + rotation.
     {
-        const NumericType kEpsilonNumericalError = 1e-6;
+        const NumericType kEpsilonNumericalError = 1e-3;
         const Eigen::Matrix<NumericType, 3, 1> translation{ 1, -3, -4 };
         const Eigen::Quaternion<NumericType> rotation{ 0, -2.54, 0, 0.5 };
         const Eigen::Transform<NumericType, 3, Eigen::Affine> transformation = buildUpTransformation3D(translation, rotation);
@@ -410,7 +410,7 @@ TEST(Transformation, ComputeSimilarityTransformDataPoints3D)
     }
     // Translation + rotation + Upscaling.
     {
-        const NumericType kEpsilonNumericalError = 1e-6;
+        const NumericType kEpsilonNumericalError = 1e-3;
         const Eigen::Matrix<NumericType, 3, 1> translation{ 1, -3, -4 };
         const Eigen::Quaternion<NumericType> rotation{ 0, -2.54, 0, 0.5 };
         const NumericType scale{ 1.9 };
